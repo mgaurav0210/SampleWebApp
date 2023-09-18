@@ -19,3 +19,13 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
+
+- task: Ant@1
+  inputs:
+    buildFile: 'build.xml'
+    options: 
+    publishJUnitResults: true
+    testResultsFiles: '**/TEST-*.xml'
+    codeCoverageToolOptions: 'Cobertura'
+    codeCoverageClassFilesDirectories: '.'
+    javaHomeOption: 'JDKVersion'
