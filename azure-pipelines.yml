@@ -19,3 +19,7 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
+
+- task: Npm@1
+  inputs:
+    command: 'install'
